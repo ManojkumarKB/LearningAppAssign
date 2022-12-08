@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide5v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05"
+                android:orientation="vertical"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guide95v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:orientation="vertical"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:elevation="12dp"
+                android:id="@+id/imgVw"
+                app:cardCornerRadius="40dp"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintLeft_toRightOf="@+id/guide5v"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_30sdp">
+                <ImageView
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/imageView1"
+                    android:src="@drawable/avatar"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtVwName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/imgVw"
+                app:layout_constraintTop_toTopOf="@+id/imgVw"
+                app:layout_constraintBottom_toTopOf="@+id/txtLocation"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Martha stewart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/imgVw"
+                app:layout_constraintTop_toBottomOf="@+id/txtVwName"
+                app:layout_constraintBottom_toBottomOf="@+id/imgVw"
+                android:fontFamily="sans-serif-condensed"
+                android:text="United Kingdom"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/txtHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/guide5v"
+                android:text="Welcome back!"
+                android:textSize="@dimen/_22sdp"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/imgVw"
+                android:layout_marginTop="@dimen/_20sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/centerLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_200sdp"
+                app:layout_constraintLeft_toRightOf="@+id/guide5v"
+                app:layout_constraintRight_toLeftOf="@+id/guide95v"
+                app:layout_constraintTop_toBottomOf="@+id/txtHead"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/rounded_rect"
+                android:elevation="@dimen/_5sdp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gdInner5V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintGuide_percent="0.08"
+                    android:orientation="vertical"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideInner50v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintGuide_percent="0.5"
+                    android:orientation="vertical"/>
+
+
+                <TextView
+                    android:id="@+id/txtLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intermediate"
+                    android:background="@drawable/rounded_rect"
+                    android:backgroundTint="@color/blueShade"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:textColor="@color/blue"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/gdInner5V"/>
+
+
+                <TextView
+                    android:id="@+id/txtInnerTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Challenge"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/_20sdp"
+                    android:lineSpacingExtra="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLevel"
+                    app:layout_constraintStart_toEndOf="@+id/gdInner5V"
+                    app:layout_constraintEnd_toStartOf="@+id/guideInner50v"/>
+
+                <TextView
+                    android:id="@+id/txtSubTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="German Meals"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtInnerTitle"
+                    app:layout_constraintStart_toEndOf="@+id/gdInner5V"
+                    app:layout_constraintEnd_toStartOf="@+id/guideInner50v"/>
+
+                <ImageView
+                    android:id="@+id/icDiamond"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSubTitle"
+                    app:layout_constraintLeft_toRightOf="@+id/gdInner5V"
+                    android:layout_marginTop="@dimen/_15sdp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/icDiamond"
+                    app:layout_constraintTop_toTopOf="@+id/icDiamond"
+                    app:layout_constraintBottom_toBottomOf="@+id/icDiamond"
+                    app:layout_constraintRight_toLeftOf="@+id/guideInner50v"
+                    android:text="Take this lesson to earn a milestone"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/_10sdp"
+                    android:padding="@dimen/_4sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtHeaderCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/guide5v"
+                android:text="Your courses"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/centerLayout"
+                android:layout_marginTop="@dimen/_30sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerVwCourses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:layout_constraintEnd_toStartOf="@+id/guide95v"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeaderCourse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_course"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_15sdp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
