@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05"
+                android:orientation="vertical"
+                android:id="@+id/guide5v"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95"
+                android:orientation="vertical"
+                android:id="@+id/guide95v"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_260sdp"
+                android:background="@drawable/drawable_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imgLeftArrow"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_baseline_chevron_left_24"
+                app:layout_constraintLeft_toRightOf="@+id/guide5v"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curse"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/imgLeftArrow"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txtCourseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Spanish"
+                android:fontFamily="sans-serif-black"
+                android:textSize="@dimen/_28sdp"
+                app:layout_constraintLeft_toRightOf="@+id/imgLeftArrow"
+                app:layout_constraintTop_toBottomOf="@+id/imgLeftArrow"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txtCourseLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Beginner"
+                android:background="@drawable/rounded_rect"
+                android:backgroundTint="@color/white"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColor="@color/yellow"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/txtCourseName"
+                app:layout_constraintStart_toStartOf="@+id/txtCourseName"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                app:layout_constraintTop_toTopOf="@+id/txtCourseName"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintRight_toLeftOf="@+id/guide95v"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <!--progress bar implementation-->
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circular_shape_detail"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar_details"
+                    android:textAlignment="center"
+                    android:progress="40"/>
+
+                <!--Text implementation in center of the progress bar-->
+                <TextView
+                    android:id="@+id/course_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/progress_bar"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                    app:layout_constraintLeft_toLeftOf="@+id/progress_bar"
+                    app:layout_constraintRight_toRightOf="@+id/progress_bar"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    tools:text="40%"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_22sdp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/course_progress_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/course_progress"
+                    app:layout_constraintLeft_toLeftOf="@+id/progress_bar"
+                    app:layout_constraintRight_toRightOf="@+id/progress_bar"
+                    android:gravity="center"
+                    tools:text="completed"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    android:textStyle="italic" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drawableIcons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@+id/txtCourseLevel"
+                app:layout_constraintTop_toBottomOf="@+id/txtCourseLevel"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/milestoneOne"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/milestoneTwo"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintLeft_toRightOf="@+id/milestoneOne"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/milestoneThree"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintLeft_toRightOf="@+id/milestoneTwo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/milestoneFour"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintLeft_toRightOf="@+id/milestoneThree"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/milestoneFive"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintLeft_toRightOf="@+id/milestoneFour"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"/>
+
+
+                <ImageView
+                    android:id="@+id/milestoneSix"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/ic_baseline_diamond_24"
+                    app:layout_constraintLeft_toRightOf="@+id/milestoneFive"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@+id/drawableIcons"
+                app:layout_constraintTop_toTopOf="@+id/drawableIcons"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text = "2 milestone"
+                android:gravity="start"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.35"
+                android:id="@+id/guide35"
+                android:orientation="horizontal"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/guide35"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:listitem="@layout/activity_course_detail"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:itemCount="6"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

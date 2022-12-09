@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_rect"
+    android:elevation="@dimen/_6sdp"
+    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@drawable/ic_baseline_basic_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/circle_bg"
+        android:padding="@dimen/_12sdp"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_18sdp"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Basics"
+        app:layout_constraintTop_toBottomOf="@+id/imgIcon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textSize="@dimen/_16sdp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/grey"/>
+
+    <TextView
+        android:id="@+id/txtLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        tools:text="4/6"
+        android:textSize="@dimen/_16sdp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/grey"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/txtLevel"
+        android:backgroundTint="@color/yellow"
+        tools:progress="60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:progressBackgroundTint="@color/grey"
+        android:progressTint="@color/yellow"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:scaleY="1.5"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

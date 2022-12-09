@@ -10,7 +10,8 @@
     <color name="grey">#999797</color>
     <color name="blueShade">#C6E4EF</color>
     <color name="blue">#2890EE</color>
-    <color name="orange">#FFC300</color>
+    <color name="yellow">#FFC300</color>
+    <color name="orange">#FF6600</color>
     <color name="green">#4CBB17</color>
     <color name="darkblue">#5C5CFF</color>
 </resources>
