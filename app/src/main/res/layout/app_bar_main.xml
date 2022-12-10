@@ -11,12 +11,11 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.LearningApp.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:titleTextAppearance="@color/white"
+            android:backgroundTint="@android:color/transparent"
             app:popupTheme="@style/Theme.LearningApp.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

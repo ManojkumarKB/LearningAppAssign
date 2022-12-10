@@ -9,14 +9,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             >
             <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
@@ -55,7 +53,7 @@
                 android:id="@+id/txtTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Curse"
+                android:text="Course"
                 android:fontFamily="sans-serif-medium"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -75,6 +73,7 @@
                 android:textSize="@dimen/_28sdp"
                 app:layout_constraintLeft_toRightOf="@+id/imgLeftArrow"
                 app:layout_constraintTop_toBottomOf="@+id/imgLeftArrow"
+                app:layout_constraintRight_toLeftOf="@+id/progress_layout"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="@color/white"/>
 
@@ -132,7 +131,7 @@
                     tools:text="40%"
                     android:fontFamily="sans-serif-black"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_22sdp"
+                    android:textSize="@dimen/_20sdp"
                     android:textStyle="italic" />
 
                 <TextView
@@ -143,7 +142,7 @@
                     app:layout_constraintLeft_toLeftOf="@+id/progress_bar"
                     app:layout_constraintRight_toRightOf="@+id/progress_bar"
                     android:gravity="center"
-                    tools:text="completed"
+                    android:text="completed"
                     android:fontFamily="sans-serif-black"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_9sdp"
@@ -151,76 +150,68 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/drawableIcons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/milestoneOne"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_baseline_diamond_24"
                 app:layout_constraintLeft_toLeftOf="@+id/txtCourseLevel"
                 app:layout_constraintTop_toBottomOf="@+id/txtCourseLevel"
-                android:layout_marginTop="@dimen/_20sdp">
+                android:layout_marginTop="@dimen/_18sdp"
+                android:visibility="visible"/>
 
-                <ImageView
-                    android:id="@+id/milestoneOne"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/ic_baseline_diamond_24"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/milestoneTwo"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_baseline_diamond_24"
+                app:layout_constraintLeft_toRightOf="@+id/milestoneOne"
+                app:layout_constraintTop_toTopOf="@+id/milestoneOne"
+                android:visibility="visible"/>
 
-                <ImageView
-                    android:id="@+id/milestoneTwo"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/ic_baseline_diamond_24"
-                    app:layout_constraintLeft_toRightOf="@+id/milestoneOne"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/milestoneThree"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_baseline_diamond_24"
+                app:layout_constraintLeft_toRightOf="@+id/milestoneTwo"
+                app:layout_constraintTop_toTopOf="@+id/milestoneOne"
+                android:visibility="visible"/>
 
-                <ImageView
-                    android:id="@+id/milestoneThree"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/ic_baseline_diamond_24"
-                    app:layout_constraintLeft_toRightOf="@+id/milestoneTwo"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/milestoneFour"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_baseline_diamond_24"
+                app:layout_constraintLeft_toRightOf="@+id/milestoneThree"
+                app:layout_constraintTop_toTopOf="@+id/milestoneOne"
+                android:visibility="visible"/>
 
-                <ImageView
-                    android:id="@+id/milestoneFour"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/ic_baseline_diamond_24"
-                    app:layout_constraintLeft_toRightOf="@+id/milestoneThree"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="visible"/>
-
-                <ImageView
-                    android:id="@+id/milestoneFive"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/ic_baseline_diamond_24"
-                    app:layout_constraintLeft_toRightOf="@+id/milestoneFour"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/milestoneFive"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_baseline_diamond_24"
+                app:layout_constraintLeft_toRightOf="@+id/milestoneFour"
+                app:layout_constraintTop_toTopOf="@+id/milestoneOne"
+                android:visibility="visible"/>
 
 
-                <ImageView
-                    android:id="@+id/milestoneSix"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/ic_baseline_diamond_24"
-                    app:layout_constraintLeft_toRightOf="@+id/milestoneFive"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="visible"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/milestoneSix"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_baseline_diamond_24"
+                app:layout_constraintLeft_toRightOf="@+id/milestoneFive"
+                app:layout_constraintTop_toTopOf="@+id/milestoneOne"
+                android:visibility="visible"/>
 
             <TextView
+                android:id="@+id/txtNoOfMilestone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@+id/drawableIcons"
-                app:layout_constraintTop_toTopOf="@+id/drawableIcons"
+                app:layout_constraintLeft_toRightOf="@+id/milestoneSix"
+                app:layout_constraintTop_toTopOf="@+id/milestoneOne"
                 app:layout_constraintRight_toRightOf="parent"
                 tools:text = "2 milestone"
                 android:gravity="start"
@@ -237,15 +228,23 @@
                 android:orientation="horizontal"/>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/guide35"
+                app:layout_constraintTop_toBottomOf="@+id/txtNoOfMilestone"
+                android:layout_marginLeft="@dimen/_5sdp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                tools:listitem="@layout/activity_course_detail"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:itemCount="6"/>
+                tools:itemCount="6"
+                tools:listitem="@layout/item_course_details"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@ class CoursesListAdapter(
     // ie ItemCourseBinding and in the RecyclerView.ViewHolder(binding.root) pass it like this
     inner class ViewHolder(val binding: ItemCourseBinding) : RecyclerView.ViewHolder(binding.root)
 
-    private var colorList = listOf(R.color.orange,R.color.green,R.color.darkblue)
+    private var colorList = listOf(R.color.yellow,R.color.green,R.color.darkblue)
     // inside the onCreateViewHolder inflate the view of CourseItemBinding
     // and return new ViewHolder object containing this layout
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

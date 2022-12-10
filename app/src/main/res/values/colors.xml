@@ -14,4 +14,9 @@
     <color name="orange">#FF6600</color>
     <color name="green">#4CBB17</color>
     <color name="darkblue">#5C5CFF</color>
+    <color name="red">#E50606</color>
+    <color name="shadedBlue">#0681E5</color>
+    <color name="green2">#10A806</color>
+    <color name="purple">#A8069B</color>
+    <color name="darkBlue">#061266</color>
 </resources>

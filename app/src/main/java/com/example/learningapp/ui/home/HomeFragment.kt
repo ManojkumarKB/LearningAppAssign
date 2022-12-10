@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.learningapp.ui.home.courseDetail.CourseDetailsActivity
 import com.example.learningapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(),CoursesListAdapter.ActionListener {
@@ -68,7 +68,8 @@ class HomeFragment : Fragment(),CoursesListAdapter.ActionListener {
     }
 
     override fun onClickCourse(courseItem: CourseItem, position: Int) {
-        Toast.makeText(requireContext(),courseItem.courseLevel+" selected", Toast.LENGTH_LONG).show()
+        //Toast.makeText(requireContext(),courseItem.courseLevel+" selected", Toast.LENGTH_LONG).show()
+        startActivity(CourseDetailsActivity.getCallingIntent(requireContext(),courseItem))
     }
 
 
